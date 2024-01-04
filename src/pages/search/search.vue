@@ -65,6 +65,7 @@ export default {
   },
   created() {
     // 获取热搜
+    this.mmLoadShow = false
     // searchHot().then(({ result }) => {
     //   this.Artists = result.hots.slice(0, 5)
     //   this.mmLoadShow = false
