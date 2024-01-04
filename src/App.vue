@@ -36,10 +36,13 @@ export default {
     this.versionInfo = VERSION_INFO
 
     // 获取正在播放列表
-    getPlaylistDetail(MMPLAYER_CONFIG.PLAYLIST_ID).then((playlist) => {
-      const list = playlist.tracks.slice(0, 100)
-      this.setPlaylist({ list })
-    })
+    if (MMPLAYER_CONFIG.PLAYLIST_ID) {
+      getPlaylistDetail(MMPLAYER_CONFIG.PLAYLIST_ID).then((playlist) => {
+        const list = playlist.tracks.slice(0, 100)
+        this.setPlaylist({ list })
+        console.log(list)
+      })
+    }
 
     // 设置title
     let OriginTitile = document.title
