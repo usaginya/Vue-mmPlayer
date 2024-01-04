@@ -40,8 +40,6 @@ export function getPlaylistDetail(id) {
           .toString()
         getMusicDetail(ids).then(({ songs }) => {
           playlist.tracks = formatSongs(songs)
-          // eslint-disable-next-line no-console
-          console.log(playlist)
           resolve(playlist)
         })
       })
