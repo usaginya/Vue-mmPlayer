@@ -40,6 +40,7 @@ export function getPlaylistDetail(id) {
           .toString()
         getMusicDetail(ids).then(({ songs }) => {
           playlist.tracks = formatSongs(songs)
+          console.log(playlist)
           resolve(playlist)
         })
       })

@@ -40,7 +40,6 @@ export default {
       getPlaylistDetail(MMPLAYER_CONFIG.PLAYLIST_ID).then((playlist) => {
         const list = playlist.tracks.slice(0, 100)
         this.setPlaylist({ list })
-        console.log(list)
       })
     }
 
