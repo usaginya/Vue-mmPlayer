@@ -14,7 +14,6 @@ export function getPersonalized() {
 
 // 歌单详情
 export function getPlaylistDetail(id) {
-  if (!id) return
   return new Promise((resolve, reject) => {
     axios
       .get('/playlist/detail', {
