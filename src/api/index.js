@@ -14,7 +14,7 @@ export function getPersonalized() {
 
 // 歌单详情
 export function getPlaylistDetail(id) {
-  if (!id) return;
+  if (!id) return
   return new Promise((resolve, reject) => {
     axios
       .get('/playlist/detail', {
@@ -40,6 +40,7 @@ export function getPlaylistDetail(id) {
           .toString()
         getMusicDetail(ids).then(({ songs }) => {
           playlist.tracks = formatSongs(songs)
+          // eslint-disable-next-line no-console
           console.log(playlist)
           resolve(playlist)
         })
